@@ -20,8 +20,7 @@ grad = zeros(size(theta));
 %
 % =========================================================================
 
-H = X*theta;
-J = 1/2/m * sum((H - y) .^ 2);
+J = NonRegCostFunction(X, y, theta);
 grad = ((1/m) * (H - y)' * X)';
 J = J + lambda/2/m * sum(theta(2:end) .^ 2);
 grad(2:end) = grad(2:end) + lambda/m * theta((2:end));
