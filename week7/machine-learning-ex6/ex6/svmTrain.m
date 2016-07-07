@@ -168,7 +168,7 @@ while passes < max_passes,
         passes = 0;
     end
 
-    %fprintf('.');
+    fprintf('.');
     dots = dots + 1;
     if dots > 78
         dots = 0;
